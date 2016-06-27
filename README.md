@@ -32,7 +32,7 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
 ###Optional arguments
 
  **textfield**  
-    **Syntax:** \<field\> ...  
+   	**Syntax:** \<field\> ...  
    	**Description:** The field used to search against for term matches.  
    	**Default:** `_raw`
 
