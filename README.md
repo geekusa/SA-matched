@@ -24,21 +24,21 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
 
 ###Required arguments
 
-  **csv|search_terms_field**
-   	**Syntax:** csv=\<path\> OR search\_terms\_field=\<field\>
-   	**Description:** Specify a CSV filename including the complete path. Alternatively specify a field with a comma separated list of terms to search through.
-   	**Usage:** For the csv option, if the CSV file is in an appropriate directory then merely specifying the filename.csv is sufficient, otherwise entire path will need to be entered:  `/home/user/filename.csv`
+ **csv|search_terms_field**  
+    **Syntax:** csv=\<path\> OR search\_terms\_field=\<field\>  
+    **Description:** Specify a CSV filename including the complete path. Alternatively specify a field with a comma separated list of terms to search through.  
+    **Usage:** For the csv option, if the CSV file is in an appropriate directory then merely specifying the filename.csv is sufficient, otherwise entire path will need to be entered:  `/home/user/filename.csv`
 
 ###Optional arguments
 
-  **textfield**
-   	**Syntax:** \<field\> ...
-   	**Description:** The field used to search against for term matches.
+ **textfield**  
+    **Syntax:** \<field\> ...  
+   	**Description:** The field used to search against for term matches.  
    	**Default:** `_raw`
 
-  **labelfield**
-   	**Syntax:** labelfield=\<field\>
-   	**Description:** Name of the field to write the matched search terms to.
+  **labelfield**  
+   	**Syntax:** labelfield=\<field\>  
+   	**Description:** Name of the field to write the matched search terms to.  
    	**Default:** searchTermsMatch
 
 ##Examples
