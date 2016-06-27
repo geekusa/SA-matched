@@ -6,6 +6,8 @@ Available at:
 
 [Github](https://github.com/geekusa/SA-matched)
 
+Version: 0.1
+
 Command reference:
 
 #matched
@@ -46,3 +48,6 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
 ###**1: Using a lookup to free form search then find out what matched**
 
 `* [|inputlookup ransomware_variants|rename variant as search|format]|table _time _raw|matched csv="/opt/splunk/etc/system/lookups/ransomware_variants.csv"`
+
+### Support
+Support will be provided through Splunkbase
