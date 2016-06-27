@@ -20,24 +20,24 @@ Command was created because of need identified in  [Splunk Answers 33662 - Ident
 
 ##Syntax
 
-matched csv=<filename.csv>|searchi\_terms\_field=<field> \[labelfield=<field>] \[fieldname=<field>] \[<field-list>]
+matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field\>] \[fieldname=\<field\>] \[\<field-list\>]
 
 ###Required arguments
 
         **csv|search_terms_field**
-          	**Syntax:** csv=<path> OR search_terms_field=<field>
+          	**Syntax:** csv=\<path\> OR search_terms_field=\<field\>
           	**Description:** Specify a CSV filename including the complete path. Alternatively specify a field with a comma separated list of terms to search through.
           	**Usage:** For the csv option, if the CSV file is in an appropriate directory then merely specifying the filename.csv is sufficient, otherwise entire path will need to be entered:  `/home/user/filename.csv`
 
 ###Optional arguments
 
 	**textfield**
-        	**Syntax:** <field> ...
+        	**Syntax:** \<field\> ...
         	**Description:** The field used to search against for term matches.
 		**Default:** `_raw`
 
 	**labelfield**
-        	**Syntax:** labelfield=<field>
+        	**Syntax:** labelfield=\<field\>
         	**Description:** Name of the field to write the matched search terms to.
           	**Default:** searchTermsMatch
 
