@@ -6,7 +6,7 @@ Available at:
 
 [Github](https://github.com/geekusa/SA-matched)
 
-Version: 0.1
+Version: 1.0
 
 Command reference:
 
