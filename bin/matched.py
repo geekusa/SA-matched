@@ -34,7 +34,7 @@ class searchTermMatch(StreamingCommand):
         if self.labelfield:
             fieldname = self.labelfield
         else:
-            fieldname = "searchTermsMatch"
+            fieldname = "searchTermsMatched"
         #if csv file contains the search terms
         try:
             reader = csv.DictReader(self.csv_file)
