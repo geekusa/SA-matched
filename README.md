@@ -16,7 +16,7 @@ Command reference:
 
 The `matched` command finds which terms exist in a field of text from a field or csv list of terms. Unless you specify a different field, `matched` results are based on the contents of the `_raw` field.
 
-The result of the matched command appends a new field to each event. You can specify what to name the field with the `lablefield` parameter, which defaults to `searchTermsMatched`. Either `csv` or `search_terms_field` parameter is required. `search_terms_field` must be a comma separated list of terms.
+The result of the matched command appends a new field to each event. You can specify what to name the field with the `labelfield` parameter, which defaults to `searchTermsMatched`. Either `csv` or `search_terms_field` parameter is required. `search_terms_field` must be a comma separated list of terms.
 
 Command was created because of need identified in  [Splunk Answers 33662 - Identfying the Search Terms Matched](https://answers.splunk.com/answers/33662/identfying-the-search-terms-matched.html).
 
