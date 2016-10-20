@@ -26,7 +26,7 @@ class searchTermMatch(StreamingCommand):
 
     textfield = Option(
         doc='''
-        **Syntax:** **search_terms=***<fieldname>*
+        **Syntax:** **textfield=***<fieldname>*
         **Description:** Name of the field that will contain the text to search against''',
         validate=validators.Fieldname())
 

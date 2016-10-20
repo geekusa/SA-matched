@@ -6,7 +6,7 @@ Available at:
 
 [Github](https://github.com/geekusa/SA-matched)
 
-Version: 1.0
+Version: 1.1
 
 Command reference:
 
@@ -51,3 +51,6 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
 
 ### Support
 Support will be provided through Splunkbase
+
+### Release Notes
+Fixed issue with textfield option not working properly. Added config to support syntax highlighting on version 6.5
