@@ -47,7 +47,7 @@ class searchTermMatch(StreamingCommand):
         for record in records:
             outputlist = []
             if self.textfield:
-                text = record[self.textfield]
+                text = record[self.textfield][0]
             else:
                 text = record['_raw']
             #if a field contains the search terms
