@@ -60,14 +60,20 @@ class searchTermMatch(StreamingCommand):
                 for term in search_terms:
                     if term.lower() in text.lower():
                         outputlist.append(term)
-                        record[fieldname] = outputlist
+                    else:
+                        noValue = ""
+                        outputlist.append(noValue) 
+                    record[fieldname] = outputlist
             except:
                 pass
             try:
                 for term in search_terms_list:
                     if term.lower() in text.lower():
                         outputlist.append(term)
-                        record[fieldname] = outputlist
+                    else:
+                        noValue = ""
+                        outputlist.append(noValue)
+                    record[fieldname] = outputlist
             except:
                 pass
             yield record
