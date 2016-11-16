@@ -38,6 +38,10 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
    	**Description:** The field used to search against for term matches.  
    	**Default:** `_raw`
 
+ **csvfield**  
+   	**Syntax:** \<string\> ...  
+   	**Description:** The field inside the CSV file that will be used to search against for term matches (requires the csv option).
+
   **labelfield**  
    	**Syntax:** labelfield=\<field\>  
    	**Description:** Name of the field to write the matched search terms to.  
@@ -48,6 +52,10 @@ matched csv=\<filename.csv\>|search\_terms\_field=\<field\> \[labelfield=\<field
 ###**1: Using a lookup to free form search then find out what matched**
 
 `* [|inputlookup ransomware_variants|rename variant as search|format]|table _time _raw|matched csv="/opt/splunk/etc/system/lookups/ransomware_variants.csv"`
+
+###**2: Using a previous outputcsv search to look for recurring users with failed logons from lastime report ran**
+
+`EventCode=4625 | stats values(src) as src count as user_count by user,host,src_ip | matched csv="/opt/splunk/var/run/splunk/csv/previousFailedLogons.csv" textfield=user labelfield=recurFromLastReport csvfield=user`
 
 ### Support
 Support will be provided through Splunkbase

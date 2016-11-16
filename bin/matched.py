@@ -24,6 +24,11 @@ class searchTermMatch(StreamingCommand):
         **Description:** CSV file that will contain the terms to search with''',
         name='csv', validate=validators.File())
 
+    csvfield= Option(
+        doc='''**Syntax:** **csvfield=***<path>*
+        **Description:** Field inside the CSV file that will contain the terms to search with (requires the csv option)''',
+        ) 	
+
     textfield = Option(
         doc='''
         **Syntax:** **textfield=***<fieldname>*
@@ -40,8 +45,13 @@ class searchTermMatch(StreamingCommand):
             reader = csv.DictReader(self.csv_file)
             search_terms_list = []
             for row in reader:
-                for k,v in row.items():
-                    search_terms_list.append(v)
+                if self.csvfield:
+                    if row[self.csvfield] not in search_terms_list:
+                        search_terms_list.append(row[self.csvfield])
+                else:
+                    for k,v in row.items():
+                        if v not in search_terms_list:
+                            search_terms_list.append(v)
         except:
             pass
         for record in records:
